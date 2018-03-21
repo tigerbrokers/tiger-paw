@@ -7,14 +7,25 @@ yargs.command({
   command: 'create [project]',
   desc: 'Create new project',
   builder (yargs) {
-    yargs.option('template', {
-      alias: 't',
-      describe: 'use template'
-    })
+    yargs
+      .option('force', {
+        type: 'boolean',
+        alias: 'f',
+        default: false,
+        describe: 'force to download template'
+      })
+      .option('template', {
+        alias: 't',
+        describe: 'use template',
+        default: '@tigerbrokers/paw-simple'
+      })
+      .option('registry', {
+        alias: 'r',
+        describe: 'use npm registry',
+        default: 'http://r.npm.tigerbrokers.com'
+      })
   },
-  handler (argv) {
-    create(argv)
-  }
+  handler: create
 })
 
 yargs.showHelpOnFail(true)
