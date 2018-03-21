@@ -1,16 +1,11 @@
 {
-  "name": "{{ lowerCase name }}",
+  "name": "@tigerbrokers/paw-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "demo template for tiger-paw",
   "main": "index.js",
   "scripts": {
-    "upload:prod": "tiger-cdn {{ dist }} {{ name }}",
-    "upload:test": "tiger-cdn {{ dist }} {{ name }}-test",
-    "upload:staging": "tiger-cdn {{ dist }} {{ name }}-staging"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@tigerbrokers/cdn": "^1.1.0"
-  }
+  "license": "ISC"
 }

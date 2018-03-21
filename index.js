@@ -2,6 +2,7 @@
 const yargs = require('yargs')
 
 const create = require('./lib/create.js')
+const createTemplate = require('./lib/create-template.js')
 
 yargs.command({
   command: 'create [project]',
@@ -26,6 +27,12 @@ yargs.command({
       })
   },
   handler: create
+})
+
+yargs.command({
+  command: 'create-template [name]',
+  desc: 'Create an template for tiger-paw',
+  handler: createTemplate
 })
 
 yargs.showHelpOnFail(true)
