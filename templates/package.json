@@ -1,0 +1,16 @@
+{
+  "name": "{{ lowerCase name }}",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "upload:prod": "tiger-cdn {{ dist }} {{ name }}",
+    "upload:test": "tiger-cdn {{ dist }} {{ name }}-test",
+    "upload:staging": "tiger-cdn {{ dist }} {{ name }}-staging"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tigerbrokers/cdn": "^1.1.0"
+  }
+}
