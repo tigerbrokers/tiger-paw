@@ -1,6 +1,6 @@
 {
   "name": "tiger-paw",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Scaffold for tigerbrokers",
   "main": "index.js",
   "scripts": {
